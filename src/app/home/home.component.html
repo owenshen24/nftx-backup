@@ -1,3 +1,6 @@
 <div>
-  NFTX Backup
+  <h1>NFTX Backup</h1>
+  <div *ngFor="let id of vaultIds" class="table-row">
+    <div><a routerLink="fund/{{id}}" routerLink="active">Vault {{id}}</a></div>
+  </div>
 </div>
