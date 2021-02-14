@@ -1,0 +1,20 @@
+<div>
+  <h1>Fund: {{fundId}}</h1>
+  <div>{{xTokenName}} | Balance: {{xTokenBalance}} {{xTokenSymbol}}</div>
+
+  <div *ngFor="let id of nftIdList">
+    <div>{{id}}</div>
+    <input type="checkbox" value="{{id}}" (change)="onCheckboxChange(id,$event)">
+  </div>
+
+  <div>
+    <button (click)="wrapNFTs()">Wrap NFTs</button>
+  </div>
+
+  <br>
+  <hr>
+  <div>
+    <div><input type="number" [(ngModel)]="xTokenAmount"></div>
+    <div><button (click)="redeem()">Unwrap {{xTokenSymbol}}</button></div>
+  </div>
+</div>

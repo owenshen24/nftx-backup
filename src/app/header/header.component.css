@@ -1,0 +1,24 @@
+.wallet-holder {
+  float: right;
+}
+.wallet-button {
+  font-size: 1.2rem;
+}
+.wallet-button:hover {
+  animation: colorFlash 2s linear infinite;
+}
+
+@media only screen and (max-width: 768px) {
+  .top-bar {
+    display: block;
+  }
+  .wallet-holder {
+    position: unset;
+    right: unset;
+    top: unset;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
