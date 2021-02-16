@@ -1,6 +1,6 @@
 <div>
   <h1>Fund: {{fundId}}</h1>
-  <div>{{xTokenName}} | Balance: {{xTokenBalance}} {{xTokenSymbol}}</div>
+  <div>{{xTokenName}} | Balance: {{xTokenBalance.toFormat()}} {{xTokenSymbol}}</div>
 
   <div *ngFor="let id of nftIdList">
     <div>{{id}}</div>

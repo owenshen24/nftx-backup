@@ -72,7 +72,7 @@ export class FundComponent implements OnInit {
 
     this.nft = this.contract.ERC721(nftAddress); 
     this.xToken = this.contract.ERC20(xTokenAddress);
-    this.xTokenBalance = new BigNumber(await this.contract.ERC20(xTokenAddress).methods.balanceOf(this.wallet.userAddress).call());
+    this.xTokenBalance = new BigNumber(await this.contract.ERC20(xTokenAddress).methods.balanceOf(this.wallet.userAddress).call()).div(this.constants.PRECISION);
     this.xTokenSymbol = await this.contract.ERC20(xTokenAddress).methods.symbol().call();
     this.xTokenName = await this.contract.ERC20(xTokenAddress).methods.name().call();
 
